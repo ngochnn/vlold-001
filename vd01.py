@@ -1,19 +1,4 @@
-https://gist.github.com/ASC689561/7ede0d6a8b8676d553d6be4bcf95b645
-lấu bài C ra xong quăng lên Git
-triệu huy nói vạy
-C++ á
 
-Thuc Nguyen
-lan anh có thể chụp dùm t mấy cái code trong trang đó ko bà
-
-Gái Chưa Chồng
-lấy html luôn k bà
-:)))
-
-Thuc Nguyen
-lấy luôn bà
-
-Hân
 <!DOCTYPE html>
 <html>
     <head>
