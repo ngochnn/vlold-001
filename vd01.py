@@ -1,27 +1,46 @@
-gach="--------------------------------------------------"
-print ("CHUONG TRINH XAC DINH TAM GIAC VA TINH CHU VI-DIEN TICH")
-
-print (gach)
-a=float(input("Nhap vao canh a: "))
-b=float(input("Nhap vao canh b: "))
-c=float(input("Nhap vao canh c: "))
-
-if (a+b>c) & (b+c>a) & (a+c>b) & (a>0) & (b>0) & (c>0):
-    if (a==b)&(b==c):
-        print ("Day la tam giac deu")
-    elif (a==b)& (a!=c) | (a==c)&(a!=b) | (b==c) & (b!=a):
-            print ("Day la tam giac can")
-    elif (a*a==b*b+c*c)|(b*b==a*a+c*c)|(c*c==a*a+b*b):
-            print("Day la tam giac vuong")
-    else:
-        print("Day la tam giac thuong")
-    import math
-    cv=a+b+c
-    p=cv/2
-    dt=math.sqrt(p*(p-a)*(p-b)*(p-c))
-    print ("Chu vi tam giac : ",round(cv,2))
-    print ("Dien tich tam giac : ",round(dt,2))
-else:
-        print ("Khong tao thanh tam giac")
-print (gach)
-print ("Thank You ")
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+ 
+int main ()
+{   clrscr ();
+    float a,b,c;
+    printf("Nhap a:");
+    scanf("%f",&a);
+    printf("Nhap b:");
+    scanf("%f",&b);
+    printf("Nhap c:");
+    scanf("%f",&c);
+    if ( a+b > c || b+c>a || c+a>b)
+    {
+        if ( a*a + b*b == c*c || b*b + c*c == a*a || c*c + a*a == b*b)
+        {
+            printf("\n 3 so ban vua nhap la do dai 3 canh cua 1 tam giac vuong");
+        }
+        else
+        {
+            if( a== b==c)
+            {
+                printf("\n 3 so ban vua nhap la do dai 3 canh cua 1 tam giac deu");
+            }
+            else
+            {
+            if(a*a > b*b + c*c || b*b > a*a + c*c || c*c > a*a + b*b)
+            {
+                printf("\n 3 so ban vua nhap la do dai 3 canh cua 1 tam giac tu");
+            }
+            else
+            {
+                printf("\n 3 so ban vua nhap la do dai 3 canh cua 1 tam giac nhon");
+            }
+            }
+        }
+    }
+    else
+    {
+    printf("\n Ba so ban vua nhap ko phai la do \
+       dai 3 canh cua 1 tam giac");
+    }
+    getch ();
+    return 0;
+}
