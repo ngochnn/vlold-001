@@ -1,36 +1,27 @@
-import math
- 
-"""
-# Giải phương trình bậc 2: ax2 + bx + c = 0
-# @param a: hệ số bậc 2
-# @param b: hệ số bậc 1
-# @param c: số hạng tự do
-"""
-def giaiPTBac2(a, b, c):
-    # kiểm tra các hệ số
-    if (a == 0):
-        if (b == 0):
-            print ("Phương trình vô nghiệm!");
-        else:
-            print ("Phương trình có một nghiệm: x = ", + (-c / b));
-        return;
- 
-    # tính delta
-    delta = b * b - 4 * a * c;
-    # tính nghiệm
-    if (delta > 0):
-        x1 = (float)((-b + math.sqrt(delta)) / (2 * a));
-        x2 = (float)((-b - math.sqrt(delta)) / (2 * a));
-        print ("Phương trình có 2 nghiệm là: x1 = ", x1, " và x2 = ", x2);
-    elif (delta == 0):
-        x1 = (-b / (2 * a));
-        print("Phương trình có nghiệm kép: x1 = x2 = ", x1);
+gach="--------------------------------------------------"
+print ("CHUONG TRINH XAC DINH TAM GIAC VA TINH CHU VI-DIEN TICH")
+
+print (gach)
+a=float(input("Nhap vao canh a: "))
+b=float(input("Nhap vao canh b: "))
+c=float(input("Nhap vao canh c: "))
+
+if (a+b>c) & (b+c>a) & (a+c>b) & (a>0) & (b>0) & (c>0):
+    if (a==b)&(b==c):
+        print ("Day la tam giac deu")
+    elif (a==b)& (a!=c) | (a==c)&(a!=b) | (b==c) & (b!=a):
+            print ("Day la tam giac can")
+    elif (a*a==b*b+c*c)|(b*b==a*a+c*c)|(c*c==a*a+b*b):
+            print("Day la tam giac vuong")
     else:
-        print("Phương trình vô nghiệm!");
- 
-# Nhập các hệ số
-a = float(input("Nhập hệ số bậc 2, a = "));
-b = float(input("Nhập hệ số bậc 1, b = "));
-c = float(input("Nhập hằng số tự do, c = "));
-# Gọi hàm giải phương trình bậc 2
-giaiPTBac2(a, b, c)
+        print("Day la tam giac thuong")
+    import math
+    cv=a+b+c
+    p=cv/2
+    dt=math.sqrt(p*(p-a)*(p-b)*(p-c))
+    print ("Chu vi tam giac : ",round(cv,2))
+    print ("Dien tich tam giac : ",round(dt,2))
+else:
+        print ("Khong tao thanh tam giac")
+print (gach)
+print ("Thank You ")
